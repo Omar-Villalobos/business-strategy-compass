@@ -24,7 +24,7 @@ export const HeroSection = () => {
         </div>
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#1a365d]/95 to-transparent z-0"></div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3')] bg-cover bg-center opacity-30 z-[-1]"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-30 z-[-1]"></div>
     </div>
   );
 };
