@@ -8,16 +8,18 @@ export const HeroSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="max-w-3xl">
           <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Transformamos tu negocio con estrategia basada en EC0249
+            Optimización empresarial avanzada bajo estándar EC0249
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-300">
-            Optimizamos el rendimiento de tu empresa mediante diagnósticos precisos y soluciones medibles
+            Elevamos el rendimiento organizacional mediante análisis estratégicos y soluciones cuantificables para maximizar su competitividad en el mercado
           </p>
           <Button className="bg-[#3b82f6] hover:bg-blue-600 text-white">
-            Consulta gratuita <ArrowRight className="ml-2 h-4 w-4" />
+            Solicitar asesoría estratégica <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
       </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1a365d]/95 to-transparent z-0"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3')] bg-cover bg-center opacity-30 z-[-1]"></div>
     </div>
   );
 };
