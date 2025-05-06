@@ -1,5 +1,5 @@
 
-import { ClipboardCheck, Target, Settings, FileCheck } from "lucide-react";
+import { ClipboardCheck, Target, Settings, FileCheck, Search } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 export const Methodology = () => {
@@ -7,23 +7,25 @@ export const Methodology = () => {
     <div className="py-20 px-4 bg-[#ffffff]">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-4 text-[#364860]">
-          Metodología EC0249
+          Metodología de Consultoría
         </h2>
         <p className="text-center text-[#364860]/80 max-w-3xl mx-auto mb-12">
-          Implementamos procesos sistemáticos basados en estándares internacionales para optimizar su organización
+          Nuestro proceso estructurado en cinco fases clave combina análisis riguroso e implementación ágil para garantizar resultados medibles
         </p>
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-5 gap-6">
           <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
-                <ClipboardCheck className="h-8 w-8 text-[#364860]" />
+                <Search className="h-8 w-8 text-[#364860]" />
               </div>
-              <CardTitle className="text-[#364860]">Diagnóstico Corporativo</CardTitle>
+              <CardTitle className="text-[#364860] text-lg">1. Diagnóstico y Análisis</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[#364860]/80">
-                Evaluación exhaustiva de procesos operativos actuales, identificación de ineficiencias sistémicas y análisis de capacidad productiva.
-              </p>
+              <ul className="text-[#364860]/80 text-sm space-y-2">
+                <li>• Recolección de datos internos y externos</li>
+                <li>• Análisis DAFO/CAME y PESTEL</li>
+                <li>• Mapeo de procesos clave</li>
+              </ul>
             </CardContent>
           </Card>
           <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
@@ -31,12 +33,29 @@ export const Methodology = () => {
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
                 <Settings className="h-8 w-8 text-[#364860]" />
               </div>
-              <CardTitle className="text-[#364860]">Propuesta de Soluciones</CardTitle>
+              <CardTitle className="text-[#364860] text-lg">2. Diseño de la Solución</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[#364860]/80">
-                Desarrollo e integración de soluciones personalizadas conforme a los estándares EC0249, optimizando recursos y maximizando el retorno de inversión.
-              </p>
+              <ul className="text-[#364860]/80 text-sm space-y-2">
+                <li>• Identificación de ventajas competitivas</li>
+                <li>• Análisis VRIO y Curvas de Valor</li>
+                <li>• Optimización de propuesta de valor</li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40 md:scale-105 z-10">
+            <CardHeader className="pb-2">
+              <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
+                <ClipboardCheck className="h-8 w-8 text-[#364860]" />
+              </div>
+              <CardTitle className="text-[#364860] text-lg">3. Planificación Estratégica</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="text-[#364860]/80 text-sm space-y-2">
+                <li>• Plan Estratégico en Una Página (OPSP)</li>
+                <li>• Definición de metas a mediano y largo plazo</li>
+                <li>• Alineación de objetivos y métricas</li>
+              </ul>
             </CardContent>
           </Card>
           <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
@@ -44,12 +63,14 @@ export const Methodology = () => {
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
                 <FileCheck className="h-8 w-8 text-[#364860]" />
               </div>
-              <CardTitle className="text-[#364860]">Presentación de Acuerdos</CardTitle>
+              <CardTitle className="text-[#364860] text-lg">4. Implementación</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[#364860]/80">
-                Establecimiento de compromisos claros con objetivos medibles, cronogramas detallados y asignación de responsabilidades entre las partes.
-              </p>
+              <ul className="text-[#364860]/80 text-sm space-y-2">
+                <li>• Despliegue de iniciativas trimestrales</li>
+                <li>• Asignación de responsables y plazos</li>
+                <li>• Diseño de tableros de control y KPIs</li>
+              </ul>
             </CardContent>
           </Card>
           <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
@@ -57,12 +78,14 @@ export const Methodology = () => {
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
                 <Target className="h-8 w-8 text-[#364860]" />
               </div>
-              <CardTitle className="text-[#364860]">Seguimiento y Evaluación</CardTitle>
+              <CardTitle className="text-[#364860] text-lg">5. Seguimiento y Ajustes</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[#364860]/80">
-                Monitorización sistemática de indicadores clave de desempeño y métricas cuantitativas para garantizar resultados verificables y sostenibles a largo plazo.
-              </p>
+              <ul className="text-[#364860]/80 text-sm space-y-2">
+                <li>• Revisión periódica de resultados</li>
+                <li>• Ajustes tácticos mediante ciclos</li>
+                <li>• Avance con foco ("20 millas")</li>
+              </ul>
             </CardContent>
           </Card>
         </div>

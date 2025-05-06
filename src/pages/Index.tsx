@@ -2,6 +2,8 @@
 import { HeroSection } from "@/components/HeroSection";
 import { Methodology } from "@/components/Methodology";
 import { FlowDiagram } from "@/components/FlowDiagram";
+import { GrowthStages } from "@/components/GrowthStages";
+import { StrategicPlanning } from "@/components/StrategicPlanning";
 import { Tools } from "@/components/Tools";
 import { Contact } from "@/components/Contact";
 
@@ -11,6 +13,8 @@ const Index = () => {
       <HeroSection />
       <Methodology />
       <FlowDiagram />
+      <StrategicPlanning />
+      <GrowthStages />
       <Tools />
       <Contact />
     </div>
