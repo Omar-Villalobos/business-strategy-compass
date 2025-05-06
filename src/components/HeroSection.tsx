@@ -57,8 +57,10 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#364860]/95 to-[#364860]/80 z-0"></div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-20 z-[-1]"></div>
+      {/* Reducing the opacity of the gradient overlay to make it less blurry */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#364860]/75 to-[#364860]/60 z-0"></div>
+      {/* Increasing the opacity of the background image for more impact */}
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-40 z-[-1]"></div>
     </div>
   );
 };
