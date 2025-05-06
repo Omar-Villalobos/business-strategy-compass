@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -48,15 +47,15 @@ export const Contact = () => {
   }
 
   return (
-    <div className="py-20 px-4 bg-[#1a365d] text-white relative overflow-hidden">
+    <div className="py-20 px-4 bg-[#364860] text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3')] bg-cover bg-center opacity-10 z-0"></div>
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="flex flex-col items-center mb-10">
-          <Briefcase className="h-12 w-12 text-[#3b82f6] mb-4" />
+          <Briefcase className="h-12 w-12 text-[#86a8be] mb-4" />
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-4">
             Evaluación de Elegibilidad para Consultoría Estratégica
           </h2>
-          <p className="text-center text-gray-300 max-w-2xl">
+          <p className="text-center text-[#86a8be] max-w-2xl">
             Complete el formulario a continuación para que nuestros especialistas evalúen la idoneidad de su organización para nuestros servicios de optimización empresarial bajo metodología EC0249
           </p>
         </div>
@@ -65,11 +64,11 @@ export const Contact = () => {
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-xl flex flex-col items-center">
             <CheckCircle2 className="h-16 w-16 text-green-400 mb-4" />
             <h3 className="text-2xl font-bold mb-2">Solicitud Recibida</h3>
-            <p className="text-center text-gray-300 mb-6">
+            <p className="text-center text-[#86a8be] mb-6">
               Su información ha sido recibida con éxito. Nuestro equipo de consultores estratégicos evaluará su caso y se pondrá en contacto en un plazo de 24-48 horas hábiles.
             </p>
             <Button 
-              className="bg-[#3b82f6] hover:bg-blue-700 transition-colors"
+              className="bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium transition-colors"
               onClick={() => setIsSubmitted(false)}
             >
               Enviar nueva solicitud
@@ -87,7 +86,7 @@ export const Contact = () => {
                       <FormItem>
                         <FormLabel className="text-white">Nombre del Ejecutivo</FormLabel>
                         <FormControl>
-                          <Input placeholder="Ej. Carlos Mendoza" className="bg-white/20 border-0 text-white placeholder:text-gray-300" {...field} />
+                          <Input placeholder="Ej. Carlos Mendoza" className="bg-white/20 border-0 text-white placeholder:text-[#86a8be]/70" {...field} />
                         </FormControl>
                         <FormMessage className="text-red-300" />
                       </FormItem>
@@ -101,7 +100,7 @@ export const Contact = () => {
                       <FormItem>
                         <FormLabel className="text-white">Cargo</FormLabel>
                         <FormControl>
-                          <Input placeholder="Ej. Director de Operaciones" className="bg-white/20 border-0 text-white placeholder:text-gray-300" {...field} />
+                          <Input placeholder="Ej. Director de Operaciones" className="bg-white/20 border-0 text-white placeholder:text-[#86a8be]/70" {...field} />
                         </FormControl>
                         <FormMessage className="text-red-300" />
                       </FormItem>
@@ -116,7 +115,7 @@ export const Contact = () => {
                     <FormItem>
                       <FormLabel className="text-white">Correo Corporativo</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="nombre@empresa.com" className="bg-white/20 border-0 text-white placeholder:text-gray-300" {...field} />
+                        <Input type="email" placeholder="nombre@empresa.com" className="bg-white/20 border-0 text-white placeholder:text-[#86a8be]/70" {...field} />
                       </FormControl>
                       <FormMessage className="text-red-300" />
                     </FormItem>
@@ -130,7 +129,7 @@ export const Contact = () => {
                     <FormItem>
                       <FormLabel className="text-white">Organización</FormLabel>
                       <FormControl>
-                        <Input placeholder="Nombre de su empresa" className="bg-white/20 border-0 text-white placeholder:text-gray-300" {...field} />
+                        <Input placeholder="Nombre de su empresa" className="bg-white/20 border-0 text-white placeholder:text-[#86a8be]/70" {...field} />
                       </FormControl>
                       <FormMessage className="text-red-300" />
                     </FormItem>
@@ -275,7 +274,7 @@ export const Contact = () => {
                       <FormControl>
                         <Textarea
                           placeholder="Detalle brevemente la situación actual y sus objetivos estratégicos..."
-                          className="h-32 bg-white/20 border-0 text-white placeholder:text-gray-300"
+                          className="h-32 bg-white/20 border-0 text-white placeholder:text-[#86a8be]/70"
                           {...field}
                         />
                       </FormControl>
@@ -284,7 +283,7 @@ export const Contact = () => {
                   )}
                 />
                 
-                <Button type="submit" className="w-full bg-[#3b82f6] hover:bg-blue-700 transition-colors">
+                <Button type="submit" className="w-full bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium transition-colors">
                   Solicitar Evaluación Estratégica
                 </Button>
               </form>
