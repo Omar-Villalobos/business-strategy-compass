@@ -1,15 +1,19 @@
 
 import { Card, CardContent } from "./ui/card";
+import { Lightbulb } from "lucide-react";
 
 export const StrategicPlanning = () => {
   return (
     <div className="py-20 px-4 bg-[#ffffff]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-4 text-[#364860]">
-          Plan Estratégico en Una Página (OPSP)
-        </h2>
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <Lightbulb className="h-8 w-8 text-[#364860]" />
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center text-[#364860]">
+            Plan Estratégico en Una Página (OPSP)
+          </h2>
+        </div>
         <p className="text-center text-[#364860]/80 max-w-3xl mx-auto mb-12">
-          Nuestra metodología exclusiva para elaborar una estrategia clara y accionable en un solo documento
+          Nuestra creación exclusiva para transformar visiones en estrategias innovadoras y accionables en un solo documento
         </p>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -23,34 +27,49 @@ export const StrategicPlanning = () => {
           
           <div className="space-y-6">
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-[#364860]">1. Bases (Columnas 1–2)</h3>
-              <p className="text-[#364860]/80 text-sm">Valores centrales, Propósito único, Modelo de ingresos y visión a largo plazo.</p>
+              <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">1</span> 
+                Visión Fundacional
+              </h3>
+              <p className="text-[#364860]/80 text-sm">Definimos valores centrales, propósito único y la visión transformadora a largo plazo para tu organización.</p>
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-[#364860]">2. Territorio y Promesas (Columna 3)</h3>
-              <p className="text-[#364860]/80 text-sm">Definición de cliente objetivo, geografía, oferta y 3–5 Promesas de Marca cuantificables.</p>
+              <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">2</span> 
+                Territorio de Innovación
+              </h3>
+              <p className="text-[#364860]/80 text-sm">Creamos tu espacio único en el mercado con una propuesta de valor diferenciada y promesas cuantificables.</p>
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-[#364860]">3. Metas anuales (Columna 4)</h3>
-              <p className="text-[#364860]/80 text-sm">Objetivos financieros a 12 meses, Número Crítico anual y 3–5 Iniciativas clave.</p>
+              <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">3</span> 
+                Diseño de Objetivos
+              </h3>
+              <p className="text-[#364860]/80 text-sm">Damos forma a metas inspiradoras a 12 meses con iniciativas creativas que impulsan el crecimiento.</p>
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-[#364860]">4. Acciones trimestrales (Columna 5)</h3>
-              <p className="text-[#364860]/80 text-sm">Número Crítico trimestral, 3–5 Rocas con responsables y fechas definidas.</p>
+              <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">4</span> 
+                Arquitectura de Acciones
+              </h3>
+              <p className="text-[#364860]/80 text-sm">Construimos un sistema trimestral de proyectos estratégicos con líderes y plazos definidos.</p>
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-[#364860]">5. Celebración y rendición de cuentas (Columnas 6–7)</h3>
-              <p className="text-[#364860]/80 text-sm">Mecanismos de reconocimiento, Dashboard de KPIs y rutinas de revisión.</p>
+              <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">5</span> 
+                Cultura de Excelencia
+              </h3>
+              <p className="text-[#364860]/80 text-sm">Integramos mecanismos de reconocimiento y sistemas de medición para mantener la creatividad y excelencia.</p>
             </div>
             
-            <Card className="bg-[#364860] text-white">
+            <Card className="bg-gradient-to-r from-[#364860] to-[#4a5f77] text-white">
               <CardContent className="p-6">
                 <p className="italic">
-                  "El Plan Estratégico en Una Página nos permite transformar ideas abstractas en objetivos tangibles y accionables para toda la organización"
+                  "El Plan Estratégico en Una Página transforma la complejidad en simplicidad, convirtiendo visiones abstractas en obras maestras empresariales tangibles"
                 </p>
                 <p className="mt-4 font-semibold">- Equipo Théa Consultores</p>
               </CardContent>

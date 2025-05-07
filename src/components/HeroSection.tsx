@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { Button } from "./ui/button";
 import { NavigationMenu } from "./NavigationMenu";
 
@@ -19,17 +19,17 @@ export const HeroSection = () => {
               className="h-24 md:h-32 mb-8 animate-fade-in"
             />
             <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 animate-fade-in text-center md:text-left">
-              Estrategia que Transforma. Proceso que Impulsa.
+              Sabiduría Estratégica para Transformar tu Empresa
             </h1>
             <p className="text-lg md:text-xl mb-8 text-[#86a8be] text-center md:text-left max-w-3xl">
-              Empoderamos a pymes y emprendedores con planes estratégicos sólidos, procesos optimizados e imagen corporativa reforzada para garantizar un crecimiento sostenible.
+              Iluminamos el camino hacia la excelencia empresarial con conocimiento experto, claridad estratégica y soluciones basadas en verdadera sabiduría de negocios.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium">
-                Solicitar consultoría <ArrowRight className="ml-2 h-4 w-4" />
+                Descubre tu potencial <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button variant="outline" className="border-[#86a8be] text-white hover:bg-[#86a8be]/20">
-                Conoce nuestra metodología
+                <BookOpen className="mr-2 h-4 w-4" /> Nuestra filosofía
               </Button>
             </div>
           </div>

@@ -54,7 +54,7 @@ export const GrowthStages = () => {
               </TableRow>
               <TableRow className="hover:bg-[#86a8be]/5">
                 <TableCell className="font-medium">Power‑Up</TableCell>
-                <TableCell>>250 colaboradores</TableCell>
+                <TableCell>{">"}250 colaboradores</TableCell>
                 <TableCell>Dominar industria</TableCell>
                 <TableCell>Reinvención continua</TableCell>
                 <TableCell>Disruptor</TableCell>
