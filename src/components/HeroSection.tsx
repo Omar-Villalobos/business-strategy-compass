@@ -69,8 +69,8 @@ export const HeroSection = () => {
       </div>
       
       {/* Background with reduced blur for more impact */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#364860]/70 to-[#364860]/50 z-0"></div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-50 z-[-1]"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#364860]/60 to-[#364860]/40 z-0"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-70 z-[-1]"></div>
     </div>
   );
 };
