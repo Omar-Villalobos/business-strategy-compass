@@ -8,6 +8,7 @@ import { BusinessModelTools } from "@/components/BusinessModelTools";
 import { Tools } from "@/components/Tools";
 import { Contact } from "@/components/Contact";
 import { MissionVision } from "@/components/MissionVision";
+import { CustomerJourney } from "@/components/CustomerJourney";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <MissionVision />
       <Methodology />
       <FlowDiagram />
+      <CustomerJourney />
       <StrategicPlanning />
       <GrowthStages />
       <BusinessModelTools />
