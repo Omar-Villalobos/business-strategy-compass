@@ -22,7 +22,7 @@ export const HeroSection = () => {
               Sabiduría Estratégica para Transformar tu Empresa
             </h1>
             <p className="text-lg md:text-xl mb-8 text-[#86a8be] text-center md:text-left max-w-3xl">
-              Iluminamos el camino hacia la excelencia empresarial con conocimiento experto, claridad estratégica y soluciones basadas en verdadera sabiduría de negocios.
+              Empoderamos a PyMEs y emprendedores en Ciudad Juárez para construir y ejecutar planes estratégicos sólidos, optimizar procesos y reforzar su imagen corporativa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium">
@@ -69,8 +69,8 @@ export const HeroSection = () => {
       </div>
       
       {/* Background with reduced blur for more impact */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#364860]/60 to-[#364860]/40 z-0"></div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-70 z-[-1]"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#364860]/80 to-[#364860]/60 z-0"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-50 z-[-1]"></div>
     </div>
   );
 };

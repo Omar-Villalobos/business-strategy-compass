@@ -13,7 +13,7 @@ export const StrategicPlanning = () => {
           </h2>
         </div>
         <p className="text-center text-[#364860]/80 max-w-3xl mx-auto mb-12">
-          Nuestra creación exclusiva para transformar visiones en estrategias innovadoras y accionables en un solo documento
+          Nuestra guía paso a paso para crear una estrategia concisa y poderosa que alinee a toda tu organización
         </p>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -29,47 +29,47 @@ export const StrategicPlanning = () => {
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">1</span> 
-                Visión Fundacional
+                Bases (Columnas 1–2)
               </h3>
-              <p className="text-[#364860]/80 text-sm">Definimos valores centrales, propósito único y la visión transformadora a largo plazo para tu organización.</p>
+              <p className="text-[#364860]/80 text-sm">Definimos valores centrales ("Debo/No debo"), Propósito único y tu modelo de ingresos (Utilidad por X), estableciendo tu BHAG® a 10–25 años.</p>
             </div>
             
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">2</span> 
-                Territorio de Innovación
+                Territorio y Promesas (Columna 3)
               </h3>
-              <p className="text-[#364860]/80 text-sm">Creamos tu espacio único en el mercado con una propuesta de valor diferenciada y promesas cuantificables.</p>
+              <p className="text-[#364860]/80 text-sm">Delimitamos tu Territorio (clientes, geografía, oferta) y seleccionamos 3–5 Promesas de Marca cuantificables con sus KPIs correspondientes.</p>
             </div>
             
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">3</span> 
-                Diseño de Objetivos
+                Metas anuales (Columna 4)
               </h3>
-              <p className="text-[#364860]/80 text-sm">Damos forma a metas inspiradoras a 12 meses con iniciativas creativas que impulsan el crecimiento.</p>
+              <p className="text-[#364860]/80 text-sm">Establecemos objetivos financieros claros, definimos tu Número Crítico anual y las 3–5 Iniciativas clave para alcanzarlo en los próximos 12 meses.</p>
             </div>
             
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">4</span> 
-                Arquitectura de Acciones
+                Acciones trimestrales (Columna 5)
               </h3>
-              <p className="text-[#364860]/80 text-sm">Construimos un sistema trimestral de proyectos estratégicos con líderes y plazos definidos.</p>
+              <p className="text-[#364860]/80 text-sm">Desglosamos el año en trimestres, definiendo un Número Crítico trimestral y 3–5 Rocas prioritarias con responsables y fechas de entrega.</p>
             </div>
             
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-[#364860] flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#364860] text-white text-sm">5</span> 
-                Cultura de Excelencia
+                Celebración, cultura y rendición de cuentas
               </h3>
-              <p className="text-[#364860]/80 text-sm">Integramos mecanismos de reconocimiento y sistemas de medición para mantener la creatividad y excelencia.</p>
+              <p className="text-[#364860]/80 text-sm">Creamos un Lema inspirador, diseñamos mecanismos de reconocimiento y establecemos un Dashboard de KPIs con rutinas de revisión semanal y mensual.</p>
             </div>
             
             <Card className="bg-gradient-to-r from-[#364860] to-[#4a5f77] text-white">
               <CardContent className="p-6">
                 <p className="italic">
-                  "El Plan Estratégico en Una Página transforma la complejidad en simplicidad, convirtiendo visiones abstractas en obras maestras empresariales tangibles"
+                  "Nuestra visión es clara: convertirnos en la firma de consultoría de referencia que impulsa la transformación de organizaciones a través de estrategias integrales"
                 </p>
                 <p className="mt-4 font-semibold">- Equipo Théa Consultores</p>
               </CardContent>

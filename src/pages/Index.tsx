@@ -7,11 +7,13 @@ import { StrategicPlanning } from "@/components/StrategicPlanning";
 import { BusinessModelTools } from "@/components/BusinessModelTools";
 import { Tools } from "@/components/Tools";
 import { Contact } from "@/components/Contact";
+import { MissionVision } from "@/components/MissionVision";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      <MissionVision />
       <Methodology />
       <FlowDiagram />
       <StrategicPlanning />
