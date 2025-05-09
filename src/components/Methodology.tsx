@@ -31,6 +31,7 @@ export const Methodology = () => {
         </p>
         
         <div className="grid md:grid-cols-5 gap-6">
+          {/* Fase 1 */}
           <Card id="diagnostico-analisis" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
@@ -46,6 +47,8 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
+          
+          {/* Fase 2 */}
           <Card id="diseno-solucion" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
@@ -61,6 +64,8 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
+          
+          {/* Fase 3 */}
           <Card id="planificacion-estrategica" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40 md:scale-105 z-10">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
@@ -76,6 +81,8 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
+          
+          {/* Fase 4 */}
           <Card id="implementacion" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
@@ -91,6 +98,8 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
+          
+          {/* Fase 5 */}
           <Card id="seguimiento-ajustes" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
