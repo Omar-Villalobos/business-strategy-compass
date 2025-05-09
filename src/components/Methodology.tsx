@@ -1,5 +1,5 @@
 
-import { BookOpen, Target, Crown, FileCheck, Search } from "lucide-react";
+import { BookOpen, Target, Crown, FileCheck, Search, ArrowUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -117,7 +117,7 @@ export const Methodology = () => {
           </Card>
         </div>
         
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-6 gap-4">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-4">
           <Button 
             onClick={() => scrollToSection('diagnostico-analisis')}
             variant="outline" 
@@ -153,10 +153,15 @@ export const Methodology = () => {
           >
             Seguimiento y Ajustes
           </Button>
+        </div>
+        
+        {/* Botón de inicio al final de la página */}
+        <div className="flex justify-center mt-16">
           <Button
             onClick={scrollToTop}
-            className="bg-[#364860] hover:bg-[#2d3e52] text-white"
+            className="bg-[#364860] hover:bg-[#2d3e52] text-white gap-2"
           >
+            <ArrowUp className="h-4 w-4" />
             Inicio
           </Button>
         </div>
