@@ -1,10 +1,27 @@
 
 import { BookOpen, Target, Crown, FileCheck, Search } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
 
 export const Methodology = () => {
+  // Function to scroll to specific sections
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Function to scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <div className="py-20 px-4 bg-[#ffffff]">
+    <div id="methodology" className="py-20 px-4 bg-[#ffffff]">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-4 text-[#364860]">
           Metodología de Excelencia
@@ -14,7 +31,7 @@ export const Methodology = () => {
         </p>
         
         <div className="grid md:grid-cols-5 gap-6">
-          <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
+          <Card id="diagnostico-analisis" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
                 <Search className="h-8 w-8 text-[#364860]" />
@@ -29,7 +46,7 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
-          <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
+          <Card id="diseno-solucion" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
                 <Crown className="h-8 w-8 text-[#364860]" />
@@ -44,7 +61,7 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
-          <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40 md:scale-105 z-10">
+          <Card id="planificacion-estrategica" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40 md:scale-105 z-10">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
                 <BookOpen className="h-8 w-8 text-[#364860]" />
@@ -59,7 +76,7 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
-          <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
+          <Card id="implementacion" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
                 <FileCheck className="h-8 w-8 text-[#364860]" />
@@ -74,7 +91,7 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
-          <Card className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
+          <Card id="seguimiento-ajustes" className="backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40">
             <CardHeader className="pb-2">
               <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
                 <Target className="h-8 w-8 text-[#364860]" />
@@ -89,6 +106,50 @@ export const Methodology = () => {
               </ul>
             </CardContent>
           </Card>
+        </div>
+        
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-6 gap-4">
+          <Button 
+            onClick={() => scrollToSection('diagnostico-analisis')}
+            variant="outline" 
+            className="text-[#364860] border-[#364860]/30 hover:bg-[#364860]/10"
+          >
+            Diagnóstico y Análisis
+          </Button>
+          <Button 
+            onClick={() => scrollToSection('diseno-solucion')}
+            variant="outline" 
+            className="text-[#364860] border-[#364860]/30 hover:bg-[#364860]/10"
+          >
+            Diseño de la Solución
+          </Button>
+          <Button 
+            onClick={() => scrollToSection('planificacion-estrategica')}
+            variant="outline" 
+            className="text-[#364860] border-[#364860]/30 hover:bg-[#364860]/10"
+          >
+            Planificación Estratégica
+          </Button>
+          <Button 
+            onClick={() => scrollToSection('implementacion')}
+            variant="outline" 
+            className="text-[#364860] border-[#364860]/30 hover:bg-[#364860]/10"
+          >
+            Implementación
+          </Button>
+          <Button 
+            onClick={() => scrollToSection('seguimiento-ajustes')}
+            variant="outline" 
+            className="text-[#364860] border-[#364860]/30 hover:bg-[#364860]/10"
+          >
+            Seguimiento y Ajustes
+          </Button>
+          <Button
+            onClick={scrollToTop}
+            className="bg-[#364860] hover:bg-[#2d3e52] text-white"
+          >
+            Inicio
+          </Button>
         </div>
       </div>
     </div>

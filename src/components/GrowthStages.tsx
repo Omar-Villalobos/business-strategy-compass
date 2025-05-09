@@ -1,8 +1,9 @@
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 import { Progress } from "./ui/progress";
-import { CheckCircle, Circle, CircleCheck, CircleDot, Star } from "lucide-react";
+import { CheckCircle, Circle, CircleCheck, CircleDot, Star, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 const stageArchetypes = {
   StartUp: {
@@ -58,8 +59,15 @@ const stageList = Object.entries(stageArchetypes).map(([key, value]) => ({
 }));
 
 export const GrowthStages = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-[#f0f4f8] to-[#e9edf1]">
+    <section id="growth-stages" className="py-20 px-4 bg-gradient-to-br from-[#f0f4f8] to-[#e9edf1]">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="font-playfair text-4xl md:text-5xl font-bold text-center text-[#243b53] mb-6"
@@ -144,6 +152,16 @@ export const GrowthStages = () => {
             </button>
           </div>
         </motion.div>
+        
+        <div className="flex justify-center mt-12">
+          <Button
+            onClick={scrollToTop}
+            className="bg-[#364860] hover:bg-[#2d3e52] text-white gap-2"
+          >
+            <ArrowUp className="h-4 w-4" />
+            Inicio
+          </Button>
+        </div>
       </div>
     </section>
   );
