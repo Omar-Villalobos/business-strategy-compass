@@ -1,7 +1,62 @@
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { Progress } from "./ui/progress";
+import { CheckCircle, Circle, CircleCheck, CircleDot, Star } from "lucide-react";
 
 export const GrowthStages = () => {
+  const stages = [
+    {
+      name: "Start‑Up",
+      size: "1–5 colaboradores",
+      focus: "Producto & ajuste mercado",
+      priority: "Validar modelo de negocio",
+      ceoProfile: "Guerrero",
+      color: "#9b87f5",
+      progress: 20,
+      icon: Circle
+    },
+    {
+      name: "Grow‑Up",
+      size: "6–15 colaboradores",
+      focus: "Ventas",
+      priority: "Estabilizar ingresos",
+      ceoProfile: "Cazador",
+      color: "#7E69AB",
+      progress: 40,
+      icon: CircleDot
+    },
+    {
+      name: "Speed‑Up",
+      size: "16–80 colaboradores",
+      focus: "Diferenciación",
+      priority: "Ejecución eficiente",
+      ceoProfile: "Explorador",
+      color: "#6E59A5",
+      progress: 60,
+      icon: CircleCheck
+    },
+    {
+      name: "Scale‑Up",
+      size: "81–250 colaboradores",
+      focus: "Definir industria",
+      priority: "Escalar con disciplina",
+      ceoProfile: "Granjero",
+      color: "#33C3F0",
+      progress: 80,
+      icon: CheckCircle
+    },
+    {
+      name: "Power‑Up",
+      size: "{'>'}250 colaboradores",
+      focus: "Dominar industria",
+      priority: "Reinvención continua",
+      ceoProfile: "Disruptor",
+      color: "#0FA0CE",
+      progress: 100,
+      icon: Star
+    }
+  ];
+
   return (
     <div className="py-20 px-4 bg-[#f8f9fa]">
       <div className="max-w-6xl mx-auto">
@@ -21,44 +76,43 @@ export const GrowthStages = () => {
                 <TableHead className="font-bold text-white">Enfoque</TableHead>
                 <TableHead className="font-bold text-white">Prioridad</TableHead>
                 <TableHead className="font-bold text-white">Perfil del CEO</TableHead>
+                <TableHead className="font-bold text-white">Progreso</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              <TableRow className="hover:bg-[#86a8be]/5">
-                <TableCell className="font-medium">Start‑Up</TableCell>
-                <TableCell>1–5 colaboradores</TableCell>
-                <TableCell>Producto & ajuste mercado</TableCell>
-                <TableCell>Validar modelo de negocio</TableCell>
-                <TableCell>Guerrero</TableCell>
-              </TableRow>
-              <TableRow className="hover:bg-[#86a8be]/5">
-                <TableCell className="font-medium">Grow‑Up</TableCell>
-                <TableCell>6–15 colaboradores</TableCell>
-                <TableCell>Ventas</TableCell>
-                <TableCell>Estabilizar ingresos</TableCell>
-                <TableCell>Cazador</TableCell>
-              </TableRow>
-              <TableRow className="hover:bg-[#86a8be]/5">
-                <TableCell className="font-medium">Speed‑Up</TableCell>
-                <TableCell>16–80 colaboradores</TableCell>
-                <TableCell>Diferenciación</TableCell>
-                <TableCell>Ejecución eficiente</TableCell>
-                <TableCell>Explorador</TableCell>
-              </TableRow>
-              <TableRow className="hover:bg-[#86a8be]/5">
-                <TableCell className="font-medium">Scale‑Up</TableCell>
-                <TableCell>81–250 colaboradores</TableCell>
-                <TableCell>Definir industria</TableCell>
-                <TableCell>Escalar con disciplina</TableCell>
-                <TableCell>Granjero</TableCell>
-              </TableRow>
-              <TableRow className="hover:bg-[#86a8be]/5">
-                <TableCell className="font-medium">Power‑Up</TableCell>
-                <TableCell>{">"}250 colaboradores</TableCell>
-                <TableCell>Dominar industria</TableCell>
-                <TableCell>Reinvención continua</TableCell>
-                <TableCell>Disruptor</TableCell>
-              </TableRow>
+              {stages.map((stage, index) => (
+                <TableRow 
+                  key={stage.name} 
+                  className="hover:bg-[#86a8be]/5 transition-colors"
+                  style={{ backgroundColor: `${stage.color}15` }}
+                >
+                  <TableCell className="font-medium flex items-center">
+                    <div className="mr-2">
+                      <stage.icon size={20} color={stage.color} strokeWidth={2} />
+                    </div>
+                    <span style={{ color: stage.color }}>{stage.name}</span>
+                  </TableCell>
+                  <TableCell>{stage.size}</TableCell>
+                  <TableCell>{stage.focus}</TableCell>
+                  <TableCell>{stage.priority}</TableCell>
+                  <TableCell>{stage.ceoProfile}</TableCell>
+                  <TableCell className="w-24">
+                    <Progress value={stage.progress} className="h-2" 
+                      style={{ 
+                        backgroundColor: `${stage.color}30`,
+                      }}
+                    >
+                      <div 
+                        className="h-full transition-all" 
+                        style={{ 
+                          backgroundColor: stage.color,
+                          width: `${stage.progress}%` 
+                        }} 
+                      />
+                    </Progress>
+                  </TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </div>
