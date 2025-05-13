@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 
-// Fases definidas como objeto de datos
+// Datos de las fases metodológicas
 const phases = [
   {
     id: "diagnostico-analisis",
@@ -59,7 +59,7 @@ export const Methodology = () => {
           Metodología de Excelencia
         </h2>
         <p className="text-center text-[#364860]/80 max-w-3xl mx-auto mb-12">
-          Un sistema estructurado y probado que combina análisis riguroso con implementación ágil, asegurando resultados tangibles en cada fase del proceso
+          Sistema estructurado que combina análisis riguroso con implementación ágil para resultados tangibles
         </p>
 
         {/* Fases */}
@@ -96,7 +96,7 @@ export const Methodology = () => {
           ))}
         </div>
 
-        {/* Botones de navegación */}
+        {/* Navegación simplificada */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-4">
           {phases.map(({ id, title }) => (
             <Button
