@@ -11,6 +11,43 @@ export const HeroSection = () => {
       
       {/* Hero content */}
       <div className="py-20 px-4 md:py-32 max-w-6xl mx-auto relative z-10">
+        {/* Slogan destacado */}
+        <div className="text-center mb-8">
+          <h1 className="font-playfair text-2xl md:text-4xl font-bold text-[#86a8be] mb-2 animate-fade-in">
+            ESTRATEGIA QUE TRANSFORMA. PROCESO QUE IMPULSA
+          </h1>
+          <div className="w-32 h-1 bg-[#86a8be] mx-auto"></div>
+        </div>
+
+        {/* Créditos PyME destacados */}
+        <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-orange-500/30">
+          <div className="text-center">
+            <h2 className="text-orange-400 text-xl md:text-2xl font-bold mb-2">
+              🏢 CRÉDITOS PyME DISPONIBLES
+            </h2>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-white">
+              <div className="text-center">
+                <div className="text-2xl md:text-4xl font-bold text-orange-400">
+                  $2,000,000
+                </div>
+                <div className="text-sm text-orange-200">DESDE</div>
+              </div>
+              <div className="text-orange-400 text-2xl md:text-4xl font-bold">
+                —
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-4xl font-bold text-orange-400">
+                  $300,000,000
+                </div>
+                <div className="text-sm text-orange-200">HASTA</div>
+              </div>
+            </div>
+            <p className="text-orange-200 mt-4 text-lg font-medium">
+              Financiamiento empresarial para impulsar tu crecimiento
+            </p>
+          </div>
+        </div>
+
         <div className="flex flex-col items-center mb-12 md:items-start md:flex-row md:gap-8">
           <div className="md:w-1/2">
             <img 
@@ -18,9 +55,9 @@ export const HeroSection = () => {
               alt="THÉA CONSULTORES Logo" 
               className="h-24 md:h-32 mb-8 animate-fade-in"
             />
-            <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 animate-fade-in text-center md:text-left">
+            <h3 className="font-playfair text-3xl md:text-5xl font-bold mb-6 animate-fade-in text-center md:text-left">
               Sabiduría Estratégica para Transformar tu Empresa
-            </h1>
+            </h3>
             <p className="text-lg md:text-xl mb-8 text-[#86a8be] text-center md:text-left max-w-3xl">
               Empoderamos a PyMEs y emprendedores en Ciudad Juárez para construir y ejecutar planes estratégicos sólidos, optimizar procesos y reforzar su imagen corporativa.
             </p>

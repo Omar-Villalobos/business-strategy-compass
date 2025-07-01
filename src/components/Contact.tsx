@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Briefcase, CheckCircle2, ChartBar, Building2, Users } from "lucide-react";
+import { Briefcase, CheckCircle2, ChartBar, Building2, Users, Phone, Mail } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "./ui/form";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
@@ -58,6 +58,20 @@ export const Contact = () => {
           <p className="text-center text-[#86a8be] max-w-2xl">
             Complete el formulario a continuación para que nuestros especialistas evalúen la idoneidad de su organización para nuestros servicios de optimización empresarial bajo metodología EC0249
           </p>
+          
+          {/* Información de contacto destacada */}
+          <div className="mt-6 bg-[#86a8be]/20 rounded-lg p-4 w-full max-w-md">
+            <div className="flex items-center justify-center gap-4 text-white">
+              <div className="flex items-center gap-2">
+                <Phone className="h-5 w-5 text-orange-500" />
+                <span className="text-sm">657-297-3150</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-5 w-5 text-[#86a8be]" />
+                <span className="text-sm">info@thea-consultores.com</span>
+              </div>
+            </div>
+          </div>
         </div>
         
         {isSubmitted ? (
@@ -67,6 +81,10 @@ export const Contact = () => {
             <p className="text-center text-[#86a8be] mb-6">
               Su información ha sido recibida con éxito. Nuestro equipo de consultores estratégicos evaluará su caso y se pondrá en contacto en un plazo de 24-48 horas hábiles.
             </p>
+            <div className="text-center mb-4">
+              <p className="text-white font-medium">Contáctenos directamente:</p>
+              <p className="text-[#86a8be]">📱 657-297-3150 | ✉️ info@thea-consultores.com</p>
+            </div>
             <Button 
               className="bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium transition-colors"
               onClick={() => setIsSubmitted(false)}

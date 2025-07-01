@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const ActivoAlliance = () => {
   const activoServices = [
-    "Crédito PyME",
+    "Crédito PyME ($2M - $300M MXN)",
     "Crédito Hipotecario", 
     "Crédito de Auto",
     "Seguros"
@@ -52,7 +52,7 @@ export const ActivoAlliance = () => {
                   <Building2 className="h-8 w-8 text-[#86a8be]" />
                   <CardTitle className="text-white text-xl">Théa Consultores</CardTitle>
                 </div>
-                <p className="text-[#86a8be] text-sm">Estrategia que Transforma. Proceso que Impulsa.</p>
+                <p className="text-[#86a8be] text-sm font-medium">Estrategia que Transforma. Proceso que Impulsa.</p>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
@@ -92,8 +92,14 @@ export const ActivoAlliance = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 p-3 bg-orange-500/20 rounded-lg">
-                  <p className="text-orange-200 font-medium text-center">
+                <div className="mt-6 p-4 bg-orange-500/20 rounded-lg border border-orange-500/30">
+                  <p className="text-orange-200 font-bold text-center text-lg">
+                    💰 CRÉDITOS PyME
+                  </p>
+                  <p className="text-white font-bold text-center text-xl">
+                    $2M - $300M MXN
+                  </p>
+                  <p className="text-orange-200 text-center text-sm mt-1">
                     Asesoría SIN COSTO
                   </p>
                 </div>
