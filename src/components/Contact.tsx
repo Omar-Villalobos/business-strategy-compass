@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -9,6 +10,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "./ui/use-toast";
 
 const formSchema = z.object({
   executiveName: z.string().min(3, "Nombre requerido"),
@@ -24,6 +27,8 @@ const formSchema = z.object({
 
 export const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -40,10 +45,43 @@ export const Contact = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    setIsSubmitted(true);
-    // Aquí iría la lógica para enviar los datos del formulario
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: values
+      });
+
+      if (error) {
+        console.error('Error enviando formulario:', error);
+        toast({
+          title: "Error",
+          description: "Hubo un problema enviando su solicitud. Por favor intente nuevamente.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      console.log('Formulario enviado exitosamente:', data);
+      setIsSubmitted(true);
+      form.reset();
+      
+      toast({
+        title: "¡Solicitud Enviada!",
+        description: "Su solicitud ha sido enviada exitosamente. Nos pondremos en contacto pronto.",
+      });
+
+    } catch (error) {
+      console.error('Error inesperado:', error);
+      toast({
+        title: "Error",
+        description: "Error inesperado. Por favor intente nuevamente o contáctenos directamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -59,7 +97,6 @@ export const Contact = () => {
             Complete el formulario a continuación para que nuestros especialistas evalúen la idoneidad de su organización para nuestros servicios de optimización empresarial bajo metodología EC0249
           </p>
           
-          {/* Información de contacto destacada */}
           <div className="mt-6 bg-[#86a8be]/20 rounded-lg p-4 w-full max-w-md">
             <div className="flex items-center justify-center gap-4 text-white">
               <div className="flex items-center gap-2">
@@ -301,8 +338,12 @@ export const Contact = () => {
                   )}
                 />
                 
-                <Button type="submit" className="w-full bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium transition-colors">
-                  Solicitar Evaluación Estratégica
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium transition-colors disabled:opacity-50"
+                >
+                  {isSubmitting ? "Enviando..." : "Solicitar Evaluación Estratégica"}
                 </Button>
               </form>
             </Form>
