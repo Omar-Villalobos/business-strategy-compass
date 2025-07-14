@@ -1,5 +1,5 @@
 
-import { Phone, Mail, Building2, HandHeart } from "lucide-react";
+import { Phone, Mail, Building2, HandHeart, Linkedin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
@@ -117,7 +117,7 @@ export const ActivoAlliance = () => {
           className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center"
         >
           <h3 className="text-2xl font-bold text-white mb-6">Contáctanos</h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="flex items-center justify-center gap-3">
               <Phone className="h-6 w-6 text-orange-500" />
               <div>
@@ -130,6 +130,20 @@ export const ActivoAlliance = () => {
               <div>
                 <p className="text-white font-medium">Email</p>
                 <p className="text-[#86a8be]">info@thea-consultores.com</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              <Linkedin className="h-6 w-6 text-blue-400" />
+              <div>
+                <p className="text-white font-medium">LinkedIn</p>
+                <a 
+                  href="https://www.linkedin.com/company/thea-consultores/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Théa Consultores
+                </a>
               </div>
             </div>
           </div>
