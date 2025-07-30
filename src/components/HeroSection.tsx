@@ -16,7 +16,7 @@ export const HeroSection = () => {
           <img 
             src="/lovable-uploads/87b070a6-4748-483d-9cb6-4526714c1c14.png" 
             alt="THÉA CONSULTORES - Estrategia que Transforma. Proceso que Impulsa" 
-            className="mx-auto max-w-full h-auto mb-4 animate-fade-in"
+            className="mx-auto max-w-md h-auto mb-4 animate-fade-in"
           />
         </div>
 
@@ -51,11 +51,6 @@ export const HeroSection = () => {
 
         <div className="flex flex-col items-center mb-12 md:items-start md:flex-row md:gap-8">
           <div className="md:w-1/2">
-            <img 
-              src="/lovable-uploads/e88bfd51-55f3-4019-8d6f-304d9a757d20.png" 
-              alt="THÉA CONSULTORES Logo" 
-              className="h-24 md:h-32 mb-8 animate-fade-in"
-            />
             <h3 className="font-playfair text-3xl md:text-5xl font-bold mb-6 animate-fade-in text-center md:text-left">
               Sabiduría Estratégica para Transformar tu Empresa
             </h3>
@@ -63,7 +58,18 @@ export const HeroSection = () => {
               Empoderamos a PyMEs y emprendedores en Ciudad Juárez para construir y ejecutar planes estratégicos sólidos, optimizar procesos y reforzar su imagen corporativa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium">
+              <Button 
+                className="bg-[#86a8be] hover:bg-[#6a8ca2] text-[#000000] font-medium"
+                onClick={() => {
+                  // Enviar correo promocional
+                  fetch('/functions/v1/send-promotional-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                  });
+                  // Abrir WhatsApp
+                  window.open('https://wa.me/526562973150?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20consultoría%20de%20THÉA%20CONSULTORES', '_blank');
+                }}
+              >
                 Descubre tu potencial <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button variant="outline" className="border-[#86a8be] text-white hover:bg-[#86a8be]/20">
