@@ -11,16 +11,17 @@ export const HeroSection = () => {
       
       {/* Hero content */}
       <div className="py-20 px-4 md:py-32 max-w-6xl mx-auto relative z-10">
-        {/* Slogan destacado */}
+        {/* Nuevo logo/banner */}
         <div className="text-center mb-8">
-          <h1 className="font-playfair text-2xl md:text-4xl font-bold text-[#86a8be] mb-2 animate-fade-in">
-            ESTRATEGIA QUE TRANSFORMA. PROCESO QUE IMPULSA
-          </h1>
-          <div className="w-32 h-1 bg-[#86a8be] mx-auto"></div>
+          <img 
+            src="/lovable-uploads/87b070a6-4748-483d-9cb6-4526714c1c14.png" 
+            alt="THÉA CONSULTORES - Estrategia que Transforma. Proceso que Impulsa" 
+            className="mx-auto max-w-full h-auto mb-4 animate-fade-in"
+          />
         </div>
 
-        {/* Créditos PyME destacados */}
-        <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-orange-500/30">
+        {/* Créditos PyME destacados - más delgado */}
+        <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-4 md:p-6 mb-12 border border-orange-500/30">
           <div className="text-center">
             <h2 className="text-orange-400 text-xl md:text-2xl font-bold mb-2">
               🏢 CRÉDITOS PyME DISPONIBLES
