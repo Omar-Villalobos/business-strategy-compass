@@ -3,8 +3,11 @@ import { Phone, Mail, Building2, HandHeart, Linkedin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "./ui/use-toast";
 
 export const ActivoAlliance = () => {
+  const { toast } = useToast();
   const activoServices = [
     "Crédito PyME ($2M - $300M MXN)",
     "Crédito Hipotecario", 
@@ -18,6 +21,58 @@ export const ActivoAlliance = () => {
     "Planificación Empresarial",
     "Diagnóstico Organizacional"
   ];
+
+  const handleSolicitarInformacion = async () => {
+    try {
+      // Enviar correo promocional
+      const { data, error } = await supabase.functions.invoke('send-promotional-email');
+      
+      if (error) {
+        console.error('Error enviando correo:', error);
+        toast({
+          title: "Error",
+          description: "Hubo un problema enviando la información. Por favor intente nuevamente.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      // Insertar registro en la base de datos
+      const { error: dbError } = await supabase
+        .from('contact_submissions')
+        .insert({
+          executive_name: 'Solicitud de Información',
+          executive_position: 'N/A',
+          email: 'info@thea-consultores.com',
+          company_name: 'Solicitud desde web',
+          industry: 'N/A',
+          company_size: 'N/A',
+          annual_revenue: 'N/A',
+          project_priority: 'Información general',
+          message: 'Usuario solicitó información desde el botón de Alianza Estratégica'
+        });
+
+      if (dbError) {
+        console.error('Error guardando en base de datos:', dbError);
+      }
+
+      toast({
+        title: "¡Información Enviada!",
+        description: "La información ha sido enviada a su correo. También puede contactarnos por WhatsApp.",
+      });
+
+      // Abrir WhatsApp
+      window.open('https://wa.me/526572973150?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20la%20alianza%20estratégica%20de%20THÉA%20CONSULTORES%20y%20Activo+', '_blank');
+
+    } catch (error) {
+      console.error('Error inesperado:', error);
+      toast({
+        title: "Error",
+        description: "Error inesperado. Por favor contáctenos directamente por WhatsApp.",
+        variant: "destructive",
+      });
+    }
+  };
 
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-[#364860] to-[#2d3e52]">
@@ -149,7 +204,10 @@ export const ActivoAlliance = () => {
           </div>
           
           <div className="mt-8">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3">
+            <Button 
+              className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3"
+              onClick={handleSolicitarInformacion}
+            >
               Solicitar Información
             </Button>
           </div>
