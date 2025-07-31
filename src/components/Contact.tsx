@@ -22,6 +22,10 @@ const formSchema = z.object({
   companySize: z.string().min(1, "Tamaño de la empresa requerido"),
   annualRevenue: z.string().min(1, "Ingresos anuales requeridos"),
   projectPriority: z.string().min(1, "Prioridad del proyecto requerida"),
+  // Criterios de calificación
+  urgentProblem: z.string().min(1, "Debe especificar si tiene un problema urgente"),
+  implementationCapacity: z.string().min(1, "Debe especificar su capacidad de implementación"),
+  economicCapacity: z.string().min(1, "Debe especificar su capacidad económica"),
   message: z.string().min(10, "Mensaje requerido con mínimo 10 caracteres"),
 });
 
@@ -41,6 +45,9 @@ export const Contact = () => {
       companySize: "",
       annualRevenue: "",
       projectPriority: "",
+      urgentProblem: "",
+      implementationCapacity: "",
+      economicCapacity: "",
       message: "",
     },
   });
@@ -319,6 +326,97 @@ export const Contact = () => {
                     </FormItem>
                   )}
                 />
+                
+                {/* Criterios de Calificación */}
+                <div className="bg-orange-500/20 p-6 rounded-lg border border-orange-500/30">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-orange-500" />
+                    Criterios de Calificación
+                  </h3>
+                  <p className="text-[#86a8be] mb-6 text-sm">
+                    Para brindarle el mejor servicio, necesitamos evaluar estos aspectos clave:
+                  </p>
+                  
+                  <div className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="urgentProblem"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white font-medium">
+                            1. ¿Tiene un dolor fuerte y urgente? (una necesidad real que no puede seguir ignorando)
+                          </FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="bg-white/20 border-0 text-white">
+                                <SelectValue placeholder="Seleccione una opción" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="very-urgent">Sí, es muy urgente - afecta operaciones diarias</SelectItem>
+                              <SelectItem value="urgent">Sí, es urgente - impacta resultados</SelectItem>
+                              <SelectItem value="moderate">Es moderadamente importante</SelectItem>
+                              <SelectItem value="not-urgent">No es urgente, es preventivo</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage className="text-red-300" />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="implementationCapacity"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white font-medium">
+                            2. ¿Tiene capacidad de implementación? (equipo, recursos, disposición a cambiar)
+                          </FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="bg-white/20 border-0 text-white">
+                                <SelectValue placeholder="Seleccione una opción" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="full-capacity">Sí, tenemos equipo completo y disposición total</SelectItem>
+                              <SelectItem value="good-capacity">Sí, tenemos recursos y estamos dispuestos</SelectItem>
+                              <SelectItem value="partial-capacity">Parcialmente, necesitamos apoyo adicional</SelectItem>
+                              <SelectItem value="limited-capacity">Limitada, requerimos mucho apoyo externo</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage className="text-red-300" />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="economicCapacity"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white font-medium">
+                            3. ¿Tiene capacidad económica para pagar por una solución profesional?
+                          </FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="bg-white/20 border-0 text-white">
+                                <SelectValue placeholder="Seleccione una opción" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="high-budget">Sí, tenemos presupuesto asignado para consultoría</SelectItem>
+                              <SelectItem value="moderate-budget">Sí, podemos invertir en soluciones profesionales</SelectItem>
+                              <SelectItem value="limited-budget">Presupuesto limitado, buscamos opciones flexibles</SelectItem>
+                              <SelectItem value="no-budget">No tenemos presupuesto definido aún</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage className="text-red-300" />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                </div>
                 
                 <FormField
                   control={form.control}
