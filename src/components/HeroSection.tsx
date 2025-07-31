@@ -67,7 +67,7 @@ export const HeroSection = () => {
                     headers: { 'Content-Type': 'application/json' }
                   });
                   // Abrir WhatsApp
-                  window.open('https://wa.me/526562973150?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20consultoría%20de%20THÉA%20CONSULTORES', '_blank');
+                  window.open('https://wa.me/526572973150?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20consultoría%20de%20THÉA%20CONSULTORES', '_blank');
                 }}
               >
                 Descubre tu potencial <ArrowRight className="ml-2 h-4 w-4" />

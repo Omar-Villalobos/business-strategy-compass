@@ -77,7 +77,7 @@ Saludos cordiales,
 Omar Jesús Villalobos Martínez
 THÉA CONSULTORES
 📧 info@thea-consultores.com
-📲 WhatsApp: 656-297-3150
+📲 WhatsApp: 657-297-3150
 "Estrategia que transforma. Proceso que impulsa."`,
     });
 
