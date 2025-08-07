@@ -48,6 +48,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Colores metálicos institucionales
+        steel: {
+          blue: "hsl(var(--steel-blue))",
+          silver: "hsl(var(--steel-silver))",
+          gold: "hsl(var(--steel-gold))",
+          dark: "hsl(var(--steel-dark))",
+        },
+      },
+      backgroundImage: {
+        'gradient-metallic': 'var(--gradient-metallic)',
+        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-silver': 'var(--gradient-silver)',
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
