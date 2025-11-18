@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Briefcase, CheckCircle2, ChartBar, Building2, Users, Phone, Mail } from "lucide-react";
+import { Briefcase, CheckCircle2, ChartBar, Building2, Users, Phone, Mail, ArrowUp } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "./ui/form";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
@@ -449,6 +449,16 @@ export const Contact = () => {
             </Form>
           </div>
         )}
+        
+        <div className="flex justify-center mt-12">
+          <Button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="bg-steel-dark hover:bg-steel-blue text-white gap-2"
+          >
+            <ArrowUp className="h-4 w-4" />
+            Inicio
+          </Button>
+        </div>
       </div>
     </div>
   );
