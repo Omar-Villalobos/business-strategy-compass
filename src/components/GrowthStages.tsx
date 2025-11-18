@@ -67,66 +67,57 @@ export const GrowthStages = () => {
   };
 
   return (
-    <section id="growth-stages" className="py-20 px-4 bg-gradient-to-br from-[#f0f4f8] to-[#e9edf1]">
-      <div className="max-w-6xl mx-auto">
+    <section id="growth-stages" className="py-16 px-4 bg-gradient-to-br from-secondary/5 to-white">
+      <div className="max-w-7xl mx-auto">
         <motion.h2
-          className="font-playfair text-4xl md:text-5xl font-bold text-center text-[#243b53] mb-6"
+          className="font-playfair text-3xl md:text-4xl font-bold text-center mb-3 bg-gradient-to-r from-steel-dark via-steel-blue to-steel-dark bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
         >
-          Etapas de Crecimiento Empresarial
+          Soluciones por Etapa
         </motion.h2>
 
-        <p className="text-center text-[#486581] max-w-3xl mx-auto mb-12">
-          Adaptamos nuestras soluciones según el tamaño y la madurez de su compañía para enfrentar los desafíos específicos de cada etapa.
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10 text-sm">
+          Desde StartUp hasta PowerUp, estrategias adaptadas a tu crecimiento
         </p>
 
         <motion.div
-          className="overflow-x-auto bg-white/80 backdrop-blur-sm rounded-xl shadow-xl"
+          className="overflow-x-auto bg-white/90 backdrop-blur-sm rounded-xl shadow-xl border border-steel-silver/20"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
           <Table>
-            <TableHeader className="bg-[#364860]">
+            <TableHeader className="bg-gradient-metallic">
               <TableRow>
-                <TableHead className="text-white font-semibold">Etapa</TableHead>
-                <TableHead className="text-white font-semibold">Tamaño</TableHead>
-                <TableHead className="text-white font-semibold">Enfoque</TableHead>
-                <TableHead className="text-white font-semibold">Prioridad</TableHead>
-                <TableHead className="text-white font-semibold">Perfil CEO</TableHead>
-                <TableHead className="text-white font-semibold">Progreso</TableHead>
+                <TableHead className="text-white font-semibold text-xs">Etapa</TableHead>
+                <TableHead className="text-white font-semibold text-xs">Tamaño</TableHead>
+                <TableHead className="text-white font-semibold text-xs">Enfoque</TableHead>
+                <TableHead className="text-white font-semibold text-xs">Prioridad</TableHead>
+                <TableHead className="text-white font-semibold text-xs">Progreso</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {stageList.map((stage) => (
+              {stageList.map((stage, index) => (
                 <TableRow
                   key={stage.name}
-                  className="hover:bg-[#d0d9e0]/20 transition-colors"
-                  style={{ backgroundColor: `${stage.color}10` }}
+                  className="hover:bg-accent/5 transition-colors border-b border-steel-silver/10"
+                  style={{ backgroundColor: `${stage.color}05` }}
                 >
-                  <TableCell className="flex items-center font-medium">
-                    <stage.icon size={20} color={stage.color} className="mr-2" />
+                  <TableCell className="flex items-center font-medium text-sm">
+                    <stage.icon size={18} color={stage.color} className="mr-2 flex-shrink-0" />
                     <span style={{ color: stage.color }}>{stage.name}</span>
                   </TableCell>
-                  <TableCell>{stage.size}</TableCell>
-                  <TableCell>{stage.focus}</TableCell>
-                  <TableCell>{stage.priority}</TableCell>
-                  <TableCell>{stage.ceo}</TableCell>
-                  <TableCell className="w-28">
-                    <Progress
-                      value={stage.progress}
-                      className="h-2"
-                      style={{ backgroundColor: `${stage.color}30` }}
-                    >
-                      <div
-                        className="h-full transition-all"
-                        style={{
-                          backgroundColor: stage.color,
-                          width: `${stage.progress}%`,
-                        }}
-                      />
-                    </Progress>
+                  <TableCell className="text-xs">{stage.size}</TableCell>
+                  <TableCell className="text-xs">{stage.focus}</TableCell>
+                  <TableCell className="text-xs">{stage.priority}</TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-2">
+                      <Progress value={stage.progress} className="w-20" />
+                      <span className="text-xs text-muted-foreground">{stage.progress}%</span>
+                    </div>
                   </TableCell>
                 </TableRow>
               ))}

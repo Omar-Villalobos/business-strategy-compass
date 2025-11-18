@@ -53,74 +53,50 @@ export const Methodology = () => {
   };
 
   return (
-    <div id="methodology" className="py-20 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-4 text-[#364860]">
-          Metodología de Excelencia
-        </h2>
-        <p className="text-center text-[#364860]/80 max-w-3xl mx-auto mb-12">
-          Sistema estructurado que combina análisis riguroso con implementación ágil para resultados tangibles
+    <div id="methodology" className="py-16 px-4 bg-gradient-to-br from-white to-secondary/10">
+      <div className="max-w-7xl mx-auto">
+        <motion.h2 
+          className="font-playfair text-3xl md:text-4xl font-bold text-center mb-3 bg-gradient-to-r from-steel-dark via-steel-blue to-steel-dark bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          Nuestra Metodología
+        </motion.h2>
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12 text-sm">
+          Sistema certificado EC0249 e ISO 9001:2015 que garantiza resultados medibles
         </p>
 
-        {/* Fases */}
-        <div className="grid md:grid-cols-5 gap-6">
-          {phases.map(({ id, title, icon: Icon, points }, index) => (
+        {/* Fases en Grid Compacto */}
+        <div className="grid md:grid-cols-5 gap-4">
+          {phases.map(({ title, icon: Icon, points }, index) => (
             <motion.div
-              key={id}
-              id={id}
-              initial={{ opacity: 0, y: 30 }}
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0.08 }}
               viewport={{ once: true }}
             >
-              <Card
-                className={`backdrop-blur-sm bg-white shadow-md border border-[#86a8be]/20 transition-all hover:shadow-lg hover:border-[#86a8be]/40 ${
-                  id === "planificacion-estrategica" ? "md:scale-105 z-10" : ""
-                }`}
-              >
-                <CardHeader className="pb-2">
-                  <div className="p-2 rounded-full bg-[#364860]/10 w-fit mb-2">
-                    <Icon className="h-8 w-8 text-[#364860]" />
+              <Card className="h-full backdrop-blur-sm bg-white/90 shadow-lg border-steel-silver/20 hover:shadow-xl hover:border-accent/40 transition-all duration-300 hover:-translate-y-1">
+                <CardHeader className="pb-3">
+                  <div className="p-2 rounded-lg bg-gradient-gold/10 w-fit mb-2">
+                    <Icon className="h-6 w-6 text-accent" />
                   </div>
-                  <CardTitle className="text-[#364860] text-lg">{title}</CardTitle>
+                  <CardTitle className="text-steel-dark text-base">{title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="text-[#364860]/80 text-sm space-y-2">
+                  <ul className="text-muted-foreground text-xs space-y-1.5">
                     {points.map((p, i) => (
-                      <li key={i}>• {p}</li>
+                      <li key={i} className="flex items-start gap-1">
+                        <span className="text-accent mt-0.5">•</span>
+                        <span>{p}</span>
+                      </li>
                     ))}
                   </ul>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
-        </div>
-
-        {/* Navegación simplificada */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-4">
-          {phases.map(({ id, title }) => (
-            <Button
-              key={id}
-              onClick={() => scrollToSection(id)}
-              variant="outline"
-              className="text-[#364860] border-[#364860]/30 hover:bg-[#364860]/10"
-              aria-label={`Ir a ${title}`}
-            >
-              {title.replace(/^\d+\.\s/, "")}
-            </Button>
-          ))}
-        </div>
-
-        {/* Botón de volver arriba */}
-        <div className="flex justify-center mt-16">
-          <Button
-            onClick={scrollToTop}
-            className="bg-[#364860] hover:bg-[#2d3e52] text-white gap-2"
-            aria-label="Volver al inicio de la metodología"
-          >
-            <ArrowUp className="h-4 w-4" />
-            Inicio
-          </Button>
         </div>
       </div>
     </div>

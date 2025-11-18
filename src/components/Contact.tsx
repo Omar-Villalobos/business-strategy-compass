@@ -92,26 +92,28 @@ export const Contact = () => {
   }
 
   return (
-    <div className="py-20 px-4 bg-[#364860] text-white relative overflow-hidden">
+    <div className="py-16 px-4 bg-gradient-metallic text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-steel-dark/95 via-steel-blue/90 to-steel-dark/95 z-0"></div>
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3')] bg-cover bg-center opacity-10 z-0"></div>
-      <div className="max-w-4xl mx-auto relative z-10">
-        <div className="flex flex-col items-center mb-10">
-          <Briefcase className="h-12 w-12 text-[#86a8be] mb-4" />
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-4">
-            Evaluación de Elegibilidad para Consultoría Estratégica
+      
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="flex flex-col items-center mb-8">
+          <Briefcase className="h-10 w-10 text-accent mb-3" />
+          <h2 className="font-playfair text-2xl md:text-3xl font-bold text-center mb-2">
+            Evaluación Estratégica
           </h2>
-          <p className="text-center text-[#86a8be] max-w-2xl">
-            Complete el formulario a continuación para que nuestros especialistas evalúen la idoneidad de su organización para nuestros servicios de optimización empresarial bajo metodología EC0249
+          <p className="text-steel-silver/80 text-center max-w-2xl text-sm">
+            Complete el formulario para recibir una evaluación personalizada
           </p>
           
-          <div className="mt-6 bg-[#86a8be]/20 rounded-lg p-4 w-full max-w-md">
+          <div className="mt-6 bg-steel-silver/10 backdrop-blur-sm rounded-lg p-4 w-full max-w-md border border-steel-gold/20">
             <div className="flex items-center justify-center gap-4 text-white">
               <div className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-orange-500" />
+                <Phone className="h-4 w-4 text-accent" />
                 <span className="text-sm">657-297-3150</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="h-5 w-5 text-[#86a8be]" />
+                <Mail className="h-4 w-4 text-accent" />
                 <span className="text-sm">info@thea-consultores.com</span>
               </div>
             </div>
@@ -119,8 +121,8 @@ export const Contact = () => {
         </div>
         
         {isSubmitted ? (
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-xl flex flex-col items-center">
-            <CheckCircle2 className="h-16 w-16 text-green-400 mb-4" />
+          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl flex flex-col items-center border border-steel-gold/30">
+            <CheckCircle2 className="h-14 w-14 text-green-500 mb-4" />
             <h3 className="text-2xl font-bold mb-2">Solicitud Recibida</h3>
             <p className="text-center text-[#86a8be] mb-6">
               Su información ha sido recibida con éxito. Nuestro equipo de consultores estratégicos evaluará su caso y se pondrá en contacto en un plazo de 24-48 horas hábiles.
