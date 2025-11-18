@@ -1,5 +1,7 @@
 
 import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { ArrowUp } from "lucide-react";
 
 export const MissionVision = () => {
   return (
@@ -55,6 +57,16 @@ export const MissionVision = () => {
               </ul>
             </CardContent>
           </Card>
+        </div>
+        
+        <div className="flex justify-center mt-12">
+          <Button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="bg-steel-dark hover:bg-steel-blue text-white gap-2"
+          >
+            <ArrowUp className="h-4 w-4" />
+            Inicio
+          </Button>
         </div>
       </div>
     </div>
