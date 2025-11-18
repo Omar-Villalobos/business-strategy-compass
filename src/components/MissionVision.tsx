@@ -3,48 +3,55 @@ import { Card, CardContent } from "./ui/card";
 
 export const MissionVision = () => {
   return (
-    <div className="py-20 px-4 bg-[#f9fbfd]">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-4 text-[#364860]">
+    <div className="py-16 px-4 bg-gradient-to-br from-white via-secondary/5 to-white">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-3 bg-gradient-to-r from-steel-dark via-steel-blue to-steel-dark bg-clip-text text-transparent">
           Nuestra Esencia
         </h2>
-        <p className="text-center text-[#364860]/80 max-w-3xl mx-auto mb-12">
-          Los pilares fundamentales que guían nuestro trabajo y definen nuestro impacto en el ecosistema empresarial
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10 text-sm">
+          Pilares que definen nuestro compromiso con la excelencia empresarial
         </p>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="bg-white shadow-lg border border-[#86a8be]/20 transition-all duration-300 hover:shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-playfair font-bold mb-4 text-[#364860]">Misión</h3>
-              <p className="text-[#364860]/80">
-                Empoderar a PyMEs y emprendedores para construir y ejecutar planes estratégicos sólidos, 
-                optimizar procesos estructurados y reforzar su imagen corporativa mediante soluciones 
-                de consultoría personalizadas que garanticen un crecimiento sostenible.
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="bg-white/90 backdrop-blur-sm shadow-xl border-steel-silver/20 hover:shadow-2xl hover:border-accent/40 transition-all duration-300 hover:-translate-y-1">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-playfair font-bold mb-3 text-accent">Misión</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Empoderar a PyMEs con estrategias sólidas, procesos optimizados e imagen corporativa diferenciada para crecimiento sostenible.
               </p>
             </CardContent>
           </Card>
           
-          <Card className="bg-[#364860] text-white shadow-lg border border-[#86a8be]/20 md:transform md:-translate-y-4 transition-all duration-300 hover:shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-playfair font-bold mb-4">Visión</h3>
-              <p className="text-white/90">
-                Convertirnos en la firma de consultoría de referencia que impulsa la transformación 
-                de organizaciones a través de estrategias integrales, procesos eficientes y 
-                una marca corporativa diferenciada, contribuyendo al desarrollo sostenible del 
-                ecosistema empresarial.
+          <Card className="bg-gradient-metallic text-white shadow-2xl border-steel-gold/30 md:transform md:-translate-y-2 transition-all duration-300 hover:shadow-3xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-silver/5"></div>
+            <CardContent className="p-6 relative z-10">
+              <h3 className="text-xl font-playfair font-bold mb-3 text-accent">Visión</h3>
+              <p className="text-steel-silver/95 text-sm leading-relaxed">
+                Ser la firma de consultoría líder que transforma organizaciones mediante estrategias integrales y procesos eficientes.
               </p>
             </CardContent>
           </Card>
           
-          <Card className="bg-white shadow-lg border border-[#86a8be]/20 transition-all duration-300 hover:shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-playfair font-bold mb-4 text-[#364860]">Valores</h3>
-              <ul className="text-[#364860]/80 space-y-2">
-                <li><span className="font-medium">Excelencia:</span> Compromiso con la calidad y el rigor en cada fase.</li>
-                <li><span className="font-medium">Innovación:</span> Creatividad y mejora continua en nuestras metodologías.</li>
-                <li><span className="font-medium">Transparencia:</span> Comunicación clara y honesta en todas las etapas.</li>
-                <li><span className="font-medium">Colaboración:</span> Trabajo estrecho con nuestros clientes para resultados conjuntos.</li>
-                <li><span className="font-medium">Orientación a resultados:</span> Enfoque en objetivos concretos y medibles.</li>
+          <Card className="bg-white/90 backdrop-blur-sm shadow-xl border-steel-silver/20 hover:shadow-2xl hover:border-accent/40 transition-all duration-300 hover:-translate-y-1">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-playfair font-bold mb-3 text-accent">Valores</h3>
+              <ul className="text-muted-foreground text-sm space-y-1.5">
+                <li className="flex items-start gap-2">
+                  <span className="text-accent font-bold mt-0.5">•</span>
+                  <span><span className="font-semibold text-steel-dark">Excelencia</span> en cada proyecto</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent font-bold mt-0.5">•</span>
+                  <span><span className="font-semibold text-steel-dark">Innovación</span> continua</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent font-bold mt-0.5">•</span>
+                  <span><span className="font-semibold text-steel-dark">Transparencia</span> total</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent font-bold mt-0.5">•</span>
+                  <span><span className="font-semibold text-steel-dark">Resultados</span> medibles</span>
+                </li>
               </ul>
             </CardContent>
           </Card>
